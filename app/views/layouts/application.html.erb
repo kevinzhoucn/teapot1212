@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= render_stylesheets %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="<%= controller_name %>" data-controller-name="<%= controller_name %>">
+    <div class="page">
+      <div class="header">
+        <% if @home_index_bar %>
+          <%= render partial: 'common/theme/navbar_home' %>
+        <% else %>
+          <%= render partial: 'common/theme/navbar_content' %>
+        <% end %>
+      </div>
+      <div class="mainsheet">
+        <%= yield %>
+      </div>
+      <div class="footer">
+      </div>
+    </div>
+  </body>
+</html>
