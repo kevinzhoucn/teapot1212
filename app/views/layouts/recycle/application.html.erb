@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= render_stylesheets %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body class="<%= controller_name %>" data-controller-name="<%= controller_name %>">
+    <div class="page">
+      <div class="header">
+        <% if @home_index_bar %>
+          <%= render partial: 'common/theme/navbar_home' %>
+        <% else %>
+          <%= render partial: 'common/theme/navbar_content' %>
+        <% end %>
+      </div>
+      <div class="mainsheet">
+        <%= yield %>
+      </div>
+      <div class="footer">
+        版权所有&copy;汤森路透有限公司 | ICP备案号 京N11111
+      </div>
+    </div>
+  </body>
+</html>

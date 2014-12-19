@@ -54,3 +54,8 @@ db/*.sqlite3
 /specifications
 rerun.txt
 pickle-email-*.html
+
+
+#added by albert
+/public/css/Recycle
+/app/views/common/Recycle
