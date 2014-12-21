@@ -1,0 +1,31 @@
+<h1>Listing positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpanel_positions.each do |position| %>
+      <tr>
+        <td><%= position.title %></td>
+        <td><%= position.content %></td>
+        <td><%= position.status %></td>
+        <td><%= link_to 'Show', cpanel_position_path(position) %></td>
+        <td><%= link_to 'Edit', edit_cpanel_position_path(position) %></td>
+        <td><%= link_to 'Destroy', cpanel_position_path(position), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Position', new_cpanel_position_path %>

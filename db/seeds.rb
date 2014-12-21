@@ -2,29 +2,20 @@
 
 # 默认配置项
 # 如需新增设置项，请在这里初始化默认值，然后到后台修改
+SiteConfig.delete_all
 # 首页
 # SiteConfig.index_html
-SiteConfig.save_default("index_html",<<-eos
+
+# About Title HTML
+SiteConfig.save_default("about_title", "美丽资讯")
+
+SiteConfig.save_default("about_content_html", <<-eos
 <div class="box" style="text-align:center;">
-  <p><img alt="Big_logo" src="/assets/big_logo.png"></p>
+  <p>美丽资讯</p>
 </div>
 eos
 )
 
-# Wiki 首页 HTML
-SiteConfig.save_default("wiki_index_html",<<-eos
-<div class="box">
-  Wiki Home page.
-</div>
-eos
+SiteConfig.save_default("about_image_url", 
+  "http://img5.imgtn.bdimg.com/it/u=2138704924,3329476703&fm=21&gp=0.jpg"
 )
-
-# Footer HTML
-SiteConfig.save_default("footer_html",<<-eos
-<p class="copyright">
- &copy; China Group.
-</p>
-eos
-)
-
-SiteConfig.save_default("style_url", "/css/style_white.css")

@@ -20,13 +20,8 @@
         <%= render partial: 'common/theme/navbar_content' %>
         <% end %>
       </div>
-      <div class="body">
-        <% if @home_index_bar %>
-        <%= render partial: 'common/theme/slider_fullwidth' %>
-        <% else %>
-        <%= render partial: 'common/theme/block' %>
-        <% end %>
-      </div>
+      
+      <%= yield %>
 
       <div class="footer">
         aaa

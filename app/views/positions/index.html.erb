@@ -1,0 +1,27 @@
+<h1>Listing positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positions.each do |position| %>
+      <tr>
+        <td><%= position.title %></td>
+        <td><%= position.content %></td>
+        <td><%= position.status %></td>
+        <td>
+          <%= link_to 'Apply', new_resume_path %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

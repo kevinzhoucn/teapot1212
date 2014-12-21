@@ -10,5 +10,10 @@
   <%= @resume.content %>
 </p>
 
+<p>
+  <strong>File:</strong>
+  <%= link_to 'Download', @resume.avatar.url %>
+</p>
+
 <%= link_to 'Edit', edit_resume_path(@resume) %> |
 <%= link_to 'Back', resumes_path %>

@@ -1,0 +1,29 @@
+<h1>Listing cpanel_slides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpanel_slides.each do |cpanel_slide| %>
+      <tr>
+        <td><%= cpanel_slide.title %></td>
+        <td><%= cpanel_slide.image_url %></td>
+        <td><%= link_to 'Show', cpanel_slide_path(cpanel_slide) %></td>
+        <td><%= link_to 'Edit', edit_cpanel_slide_path(cpanel_slide) %></td>
+        <td><%= link_to 'Destroy', cpanel_slide_path(cpanel_slide), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slide', new_cpanel_slide_path %>

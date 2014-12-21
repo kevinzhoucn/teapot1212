@@ -51,6 +51,8 @@ end
 
 # 上传组件
 gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 gem 'mini_magick'
 
 # Mongoid 辅助插件
@@ -65,6 +67,7 @@ gem 'cancancan'
 
 # 表单
 gem 'simple_form', '3.1.0.rc2', github: 'plataformatec/simple_form'
+gem 'rails_admin'
 
 # Bootstrap
 # Bootstrap

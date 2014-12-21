@@ -16,11 +16,12 @@ body {
 	color: #fff;
 	background: #2a2522 url('http://dream-wallpaper.com/free-wallpaper/photography-wallpaper/spa-3-wallpaper/1440x900/free-wallpaper-1.jpg') no-repeat;
 	background-size:100% 100%;
+	background-attachment: fixed;
 	background-position:center;	
-	-webkit-background-size: cover;
+	/*-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
 }
 html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 *{font-family:"微软雅黑",Arial,Helvetica,sans-serif;}
@@ -29,7 +30,7 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 	left:10%;
 	position:relative;
 	height: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .header{
 	margin: 10% 0 0 0;
@@ -40,6 +41,11 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 .body{
 	position: relative;
 	height: 60%;
+}
+.body1{
+	position: relative;
+	height: auto;
+	overflow: hidden;
 }
 .footer{
 	position: absolute;

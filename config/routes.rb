@@ -1,16 +1,21 @@
 Rails40Starter::Application.routes.draw do
+  resources :positions, only: [:index, :show]
+
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :resumes
-
   resources :news
-
   resources :groups
-
+  
   namespace :cpanel do
+    get '/' => 'front#index', as: :front_index
     resources :site_configs
+    resources :news
+    resources :positions
+    resources :slides
   end
 
   devise_for :users
-  
+
   get '/about' => 'front#about', as: :front_about
   # get '/news' => 'front#news', as: :front_news
   get '/joinus' => 'front#join', as: :front_joinus
