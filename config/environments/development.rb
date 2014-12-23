@@ -33,8 +33,8 @@ Rails40Starter::Application.configure do
     :port => 25,
     # :domain => "domain.of.sender.net",
     :authentication => :login,
-    :user_name => "tr_reuters@163.com",
-    :password => "Passw0rd",
+    :user_name => "test1w3try@163.com",
+    :password => "w3trytest1",
     # :enable_starttls_auto => true
   }
 end
