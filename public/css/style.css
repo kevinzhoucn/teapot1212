@@ -14,23 +14,18 @@ img{max-width:100%;}
 body {
 	font-size: 0.8924em;
 	color: #fff;
-	background: #2a2522 url('http://dream-wallpaper.com/free-wallpaper/photography-wallpaper/spa-3-wallpaper/1440x900/free-wallpaper-1.jpg') no-repeat;
+	background: #2a2522 url('http://img.taopic.com/uploads/allimg/110812/2028-110Q20Z32016.jpg') no-repeat;
 	background-size:100% 100%;
 	background-attachment: fixed;
 	background-position:center;	
-	/*-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;*/
+
 }
-html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
+html,body{width:100%;height: 100%;position: absolute;min-height: 600px;}
 *{font-family:"微软雅黑",Arial,Helvetica,sans-serif;}
 .wrap{
 	width: 80%;
-	left:10%;
-	position:relative;
-	height: 100%;
-	/*overflow: hidden;*/
+	margin: 0 auto;
+	height: 80%;
 }
 .header{
 	margin: 10% 0 0 0;
@@ -38,9 +33,16 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 	overflow: visible;
 	position: relative;
 }
+.header1{
+	margin: 5% 0 0 0;
+	height: 20%;
+	overflow: visible;
+	position: relative;
+}
+
 .body{
 	position: relative;
-	height: 60%;
+	height: 80%;
 }
 .body1{
 	position: relative;
@@ -48,9 +50,11 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 	overflow: hidden;
 }
 .footer{
-	position: absolute;
+	position: static;
 	bottom: 0px;
 	height: 35px;
+	line-height: 35px;
+	text-align: center;
 }
 
 .navbar{
@@ -65,10 +69,10 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 	text-align: center;
 	float: left;
 	background:#b5d10f;
-	transition: all .3s ease;
 	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
 	-moz-transition: all .3s ease;
-	-o-transition:all .3s ease;
+	transition: all .3s ease;
 }
 .navbar a{
 	display: block;
@@ -98,6 +102,13 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 	color: #ddd;
 }
 
+.navbar1{
+	width:20%;
+	height: auto;
+	overflow: hidden;
+	z-index: 100;
+}
+
 .logo{
 	position: relative;
 	z-index: 999;
@@ -105,12 +116,29 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 	top: -200%
 }
 .logo1{	
-	position: absolute;
-	left: 0%;
-	right: 85%;
+	position: relative;
+	width:100%;
 	z-index: 99;
 	top: -50%;
 }
+/*dropdown menu*/
+ul.dropdown{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+ul.dropdown li{
+	padding:7.5%;
+	background: rgba(181,209,15,.8);
+	font-size: 1.75em;
+	text-align: center;
+	border-bottom:3px inset #ddd;
+}
+	ul.dropdown li:hover,.submenu li:hover{
+		background:#85910b;
+		display: block;
+	}
+
 /*content */
 .content{
 	margin:0;
@@ -123,14 +151,47 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px}
 .txt_h{
 	display:block;
 	padding: 2.5%;
+	overflow: hidden;
 }
 .txt_h h2{
 		
 	font-size: 1.8em;
 	color:#ffffff;
 	line-height: 1.8em;
-	text-transform:uppercase;
 }
+
+/*submenu appearance*/
+.submenu{
+  overflow: hidden;
+  height:auto;
+  font-size: 1.5em;
+  margin: 10% 0 2% 0;
+ }
+ .submenu a,.dropdown a{
+ 	display: block;
+ 	width: 100%;
+ }
+.submenu  li{
+  float: left;
+  width:16%;
+  background-color: rgba(135, 160, 16, 0.53);
+  height: 45px;
+  line-height: 45px;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.submenu li.current{
+	background-color: rgba(133, 145, 11, 0.75);
+}
+
+/*Meili Zixun -image*/
+.aboutbrivates{
+	float:right;
+	border-radius:5px;
+	width:33%
+}
+
 /*main*/
 .main{
 	margin-right: 0.999%;
@@ -597,9 +658,6 @@ x:-o-prefocus, .lb-overlay img {
 		height: 65px;
 	}
 	
-	.logo1 {
-		top: 1.5%;
-	}
 	.lb-album li > a span {
 		line-height: 150px;
 	}
@@ -611,7 +669,13 @@ x:-o-prefocus, .lb-overlay img {
 		width:95%;
 		left:2.5%;
 	}
-
+	.navbar1{
+		width:25%;
+		min-width: 145px;
+	}
+	ul.dropdown li{
+		font-size:1.5em;
+		}
 	.logo{
 		top:-175%;
 	}
@@ -621,9 +685,6 @@ x:-o-prefocus, .lb-overlay img {
 		height: 55px;
 	}
 
-	.logo1 {
-		width: 20.333%;
-	}
 	.about-desc {
 		float: none;
 		width:100%;
@@ -651,6 +712,18 @@ x:-o-prefocus, .lb-overlay img {
 		border-radius: 0px !important;
 		letter-spacing: 1px;
 	}
+
+.submenu  li{
+  width:100%;
+  margin:0;
+  border-radius: 0;
+}
+
+.aboutbrivates{
+	width:100%
+}
+
+
 	.col {
 		display: block;
 		float: none;

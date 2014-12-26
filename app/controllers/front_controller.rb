@@ -8,6 +8,7 @@ class FrontController < ApplicationController
     @about_image_url = SiteConfig.about_image_url
   end
   def news
+    @news = News.all
   end
   def join
   end

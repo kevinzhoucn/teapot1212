@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: "test1w3try@163.com"
+  default from: "tr_reuters@163.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -8,6 +8,6 @@ class Notifier < ActionMailer::Base
   #
   def resume_received(resume)
     @resume = resume
-    mail :to => 'tes2w3try@163.com', :subject => 'Resume recevied Confirmation!'
+    mail :to => 'test2w3try@163.com', :subject => 'Resume recevied Confirmation!'
   end
 end

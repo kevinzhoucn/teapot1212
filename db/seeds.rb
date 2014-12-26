@@ -17,5 +17,5 @@ eos
 )
 
 SiteConfig.save_default("about_image_url", 
-  "http://img5.imgtn.bdimg.com/it/u=2138704924,3329476703&fm=21&gp=0.jpg"
+  "http://static.freepik.com/free-photo/vintage-perfume-bottle_61-2214.jpg"
 )

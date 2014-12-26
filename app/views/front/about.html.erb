@@ -1,3 +1,15 @@
-<div class="body1">
-  <%= render partial: 'common/theme/block' %>
+<div class="submenu">
+  <ul>
+    <li class="current"><a href="/about">企业形象</a></li>
+    <li><a href="/news">企业新闻</a></li>
+    <li><a href="/join">在线招聘</a></li>
+  </ul>
+</div>
+<div class="content txt_h">
+  <h2><%= @about_title %></h2>
+  <div style="display:inline">
+    <img src="<%= @about_image_url %>" class="aboutbrivates" />
+    <p style="font-size:125%"><%= @about_html.html_safe %></p>
+  </div>
+
 </div>
