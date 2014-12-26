@@ -19,3 +19,24 @@ eos
 SiteConfig.save_default("about_image_url", 
   "http://static.freepik.com/free-photo/vintage-perfume-bottle_61-2214.jpg"
 )
+
+
+SiteConfig.save_default("affiliate_advantage", <<-eos
+<div class="box" style="text-align:center;">
+  <p>加盟优势</p>
+</div>
+eos
+)
+
+SiteConfig.save_default("affiliate_policy", <<-eos
+<div class="box" style="text-align:center;">
+  <p>加盟政策</p>
+</div>
+eos
+)
+
+SiteConfig.save_default("contact_address", "北京朝阳")
+SiteConfig.save_default("contact_phone", "1234567")
+SiteConfig.save_default("contact_email", "123@example.com")
+SiteConfig.save_default("contact_qq", "1234567")
+SiteConfig.save_default("contact_webchat", "1234567")

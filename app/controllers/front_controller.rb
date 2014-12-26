@@ -12,4 +12,11 @@ class FrontController < ApplicationController
   end
   def join
   end
+  def contact
+    @contact_address = SiteConfig.contact_address
+    @contact_phone = SiteConfig.contact_phone
+    @contact_email = SiteConfig.contact_email
+    @contact_qq = SiteConfig.contact_qq
+    @contact_webchat = SiteConfig.contact_webchat
+  end
 end

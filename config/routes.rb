@@ -1,4 +1,8 @@
 Rails40Starter::Application.routes.draw do
+  resources :affiliates
+
+  resources :products
+
   resources :positions, only: [:index, :show]
 
   # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -18,7 +22,9 @@ Rails40Starter::Application.routes.draw do
 
   get '/about' => 'front#about', as: :front_about
   # get '/news' => 'front#news', as: :front_news
-  get '/joinus' => 'front#join', as: :front_joinus
+  get '/corpnews' => 'front#news', as: :front_news
+  get '/join' => 'front#join', as: :front_joinus
+  get '/contact' => 'front#contact', as: :front_contact
   root 'front#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
