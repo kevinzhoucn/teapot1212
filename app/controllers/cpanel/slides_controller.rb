@@ -33,7 +33,8 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
 
   def destroy
     @cpanel_slide.destroy
-    respond_with(@cpanel_slide)
+    # respond_with(@cpanel_slide)
+    redirect_to cpanel_slides_path
   end
 
   private
