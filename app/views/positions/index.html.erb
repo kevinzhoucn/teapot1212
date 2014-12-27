@@ -1,27 +1,53 @@
-<h1>Listing positions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Status</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="content txt_h">
+  
+  <div class="submenu">
+    <ul>
+      <li><a href="/about"><a href="/about">企业形象</a></li>
+      <li><a href="/corpnews">企业新闻</a></li>
+      <li class="current"><a href="/positions">在线招聘</a></li>
+    </ul>
+  </div>
+  <h2>美丽资讯</h2>
+  <hr>
+  <div>
     <% @positions.each do |position| %>
-      <tr>
-        <td><%= position.title %></td>
-        <td><%= position.content %></td>
-        <td><%= position.status %></td>
-        <td>
-          <%= link_to 'Apply', new_resume_path %>
-        </td>
-      </tr>
+      <div style="display:block;height:auto;overflow:hidden;margin:10px 0 10px 0;padding-bottom:15px;">
+        <img src="/img/about-img.jpg" class="aboutbrivates" style="border:5px solid #fff;box-shadow:0 0 20px #999" />
+        <h2><%= position.title %></h2>
+        <p style="font-size:1.2em"><%= position.content %></p>
+        <div class="btn">
+          <%= link_to '详细信息', position %>
+        </div>
+        <div class="btn">
+          <%= link_to '申请职位', new_resume_path %>
+        </div>
+      </div>
+      <hr>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
+<!-- <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Status</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @positions.each do |position| %>
+          <tr>
+            <td><%= position.title %></td>
+            <td><%= position.content %></td>
+            <td><%= position.status %></td>
+            <td>
+              <%= link_to 'Apply', new_resume_path %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table> -->

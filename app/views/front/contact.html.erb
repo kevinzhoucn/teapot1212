@@ -1,6 +1,51 @@
-<%= @contact_address %>
-<%= @contact_phone %>
+<%#= @contact_address %>
+<%#= @contact_phone %>
 
-<%= @contact_email %>
-<%= @contact_qq %>
-<%= @contact_webchat %>
+<%#= @contact_email %>
+<%#= @contact_qq %>
+<%#= @contact_webchat %>
+
+<div class="content txt_h">
+  <h2>财富连线</h2>
+  <hr>
+  <div class="col-left-3">
+    <div style="height:300px">
+      <img src="" width="100%" alt="地图插件">
+    </div>
+    <div>
+      <h2>公司地址</h2>
+      <p><%= @contact_address %></p>
+      <p>联系电话：<%= @contact_phone %></p>
+      <p>Email：<%= @contact_email %></p>
+      <p>QQ：<%= @contact_qq %></p>
+      <p>微信：<%= @contact_webchat %></p>
+    </div>
+  </div>
+  <div class="col-left-7">
+    <div class="contact-form">
+      <h3>联系我们</h3>
+      <form method="post" action="contact-post.html">
+        <div>
+          <span><label>您的名称</label></span>
+          <span><input name="userName" type="text" class="textbox"></span>
+        </div>
+        <div>
+          <span><label>E-MAIL</label></span>
+          <span><input name="userEmail" type="text" class="textbox"></span>
+        </div>
+        <div>
+          <span><label>联系电话</label></span>
+          <span><input name="userPhone" type="text" class="textbox"></span>
+        </div>
+        <div>
+          <span><label>给我们留言</label></span>
+          <span><textarea name="userMsg"> </textarea></span>
+        </div>
+         <div>
+            <span><input type="submit" value="提交"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

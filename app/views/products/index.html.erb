@@ -1,125 +1,129 @@
-<h1>Listing products</h1>
+<div class="content txt_h">
+  <h1>Listing products</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.content %></td>
-        <td>
-          <img src="<%= product.avatar.url %> " >
-        </td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Image</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.content %></td>
+          <td>
+            <img src="<%= product.avatar.url %> " >
+          </td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Product', new_product_path %>
+  <br>
 
-<p>Product Index.html.erb</p>
+  <%= link_to 'New Product', new_product_path %>
 
-<h1>新品速递</h1>
+  <p>Product Index.html.erb</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>新品速递</h1>
 
-  <tbody>
-    <% @product_new.each do |product| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.content %></td>
-        <td>
-          <img src="<%= product.avatar.url %> " >
-        </td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Image</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<h1>特色</h1>
+    <tbody>
+      <% @product_new.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.content %></td>
+          <td>
+            <img src="<%= product.avatar.url %> " >
+          </td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>特色</h1>
 
-  <tbody>
-    <% @product_special.each do |product| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.content %></td>
-        <td>
-          <img src="<%= product.avatar.url %> " >
-        </td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Image</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<h1>明星</h1>
+    <tbody>
+      <% @product_special.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.content %></td>
+          <td>
+            <img src="<%= product.avatar.url %> " >
+          </td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>明星</h1>
 
-  <tbody>
-    <% @product_star.each do |product| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.content %></td>
-        <td>
-          <img src="<%= product.avatar.url %> " >
-        </td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Image</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @product_star.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.content %></td>
+          <td>
+            <img src="<%= product.avatar.url %> " >
+          </td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+afadfasdasdffd
+</div>
