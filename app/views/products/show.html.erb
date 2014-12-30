@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="content txt_h">
+  <h2>产品详情: <%= @product.name %></h2>
+  <hr>
+  <div style="inline-block" class="contact-form">
+    <img src="<%= @product.avatar.url %>" class="productimg" style="border:5px solid #fff;box-shadow:0 0 20px #999" />
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+    据路透社报道，原定从印尼泗水飞往新加坡的亚航A320-200型飞机于28日失联，机上共有155人，其中有149名印尼公民、3名韩国公民、1名新加坡公民、1名英国公民和1名马来西亚公民。印尼媒体刚刚报道称，一架飞机在印尼勿里洞岛东部坠毁，目前尚未确定具体坠毁位置，这一报告是由当地海上部门官员收到的。
+　　空中客车A320系列飞机是欧洲空中客车工业公司研制生产的单通道双发中短程150座级客机。是第一款使用数字电传操纵飞行控制系统的商用飞机，也是第一款放宽静稳定度设计的民航客机。
+　　A320飞机自1988年4月投入运营以来，迅速在中短程航线上设立了舒适性和经济性的行业标准。但到2012年4月为止，A320系列共发生了59宗事故，共造成789人死亡；劫机事件6宗，造成1人死亡。截止2012年2月底，共有13家中国大陆航空公司以及3家公务机公司运营675架A320系列飞机，港澳台也有相当数量的A320客机。截止目前，中国尚未有A320系列的飞行事故发生。
+中国南方航空的A320客机，目前中国没有此类客机的飞行事故记录2
+中国南方航空的A320客机，目前中国没有此类客机的飞行事故记录
 
-<p>
-  <strong>Content:</strong>
-  <%= @product.content %>
-</p>
+  <div class="btn">
+    <a href="#" onclick="window.history.go(-1);return(false);">返回上一页</a>
+  </div>
 
-<%= image_tag @product.avatar.url %>
-<img src="<%= @product.avatar.url %>" > 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  </div>
+</div>

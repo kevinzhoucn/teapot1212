@@ -1,129 +1,79 @@
+<style type="text/css">
+@import url('/css/tabbing.css');
+</style>
 <div class="content txt_h">
-  <h1>Listing products</h1>
+  <h2>产品体系</h2>
+  <hr />
+  <div class="col-left-2">
+    <ul>
+      <li id="label1">
+        新品速递
+      </li>
+      <li id="label2">
+        特色服务
+      </li>
+      <li id="label3">
+        明星产品
+      </li>
+    </ul>
+  </div>
+  <div class="tabs col-left-8">
+    <div id="content1" class="tabcontent" style="display:block">
+      <section>
+        <ul class="lb-album">
+          <% @products.each do |product| %>
+            <li>
+              <a href="<%= product %>">
+                <img src="<%= product.avatar.url %>" />
+                <span><%= product.name %></span>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+        
+          <!-- <tr>
+            <td></td>
+            <td><%#= product.content %></td>
+            <td>
+              
+            </td>
+            <td><%#= link_to 'Show', product %></td>
+            <td><%#= link_to 'Edit', edit_product_path(product) %></td>
+            <td><%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr> -->
+        
+      </section>
+    </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Content</th>
-        <th>Image</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+    <div id="content2" class="tabcontent">
+      <section>
+        <ul class="lb-album">
+          <% @product_special.each do |product| %>
+            <li>
+              <a href="#<%= product.name %>">
+                <img src="<%= product.avatar.url %>" />
+                <span><%= product.name %></span>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
 
-    <tbody>
-      <% @products.each do |product| %>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.content %></td>
-          <td>
-            <img src="<%= product.avatar.url %> " >
-          </td>
-          <td><%= link_to 'Show', product %></td>
-          <td><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Product', new_product_path %>
-
-  <p>Product Index.html.erb</p>
-
-  <h1>新品速递</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Content</th>
-        <th>Image</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @product_new.each do |product| %>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.content %></td>
-          <td>
-            <img src="<%= product.avatar.url %> " >
-          </td>
-          <td><%= link_to 'Show', product %></td>
-          <td><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <h1>特色</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Content</th>
-        <th>Image</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @product_special.each do |product| %>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.content %></td>
-          <td>
-            <img src="<%= product.avatar.url %> " >
-          </td>
-          <td><%= link_to 'Show', product %></td>
-          <td><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <h1>明星</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Content</th>
-        <th>Image</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @product_star.each do |product| %>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.content %></td>
-          <td>
-            <img src="<%= product.avatar.url %> " >
-          </td>
-          <td><%= link_to 'Show', product %></td>
-          <td><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-afadfasdasdffd
+    <div id="content3" class="tabcontent">
+      <section>
+        <ul class="lb-album">
+          <% @product_star.each do |product| %>
+            <li>
+              <a href="#<%= product.name %>">
+                <img src="<%= product.avatar.url %>" />
+                <span><%= product.name %></span>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
+  </div>
 </div>
+<script type="text/javascript" src="/js/tabbing.js"></script>

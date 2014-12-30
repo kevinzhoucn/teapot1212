@@ -1,5 +1,5 @@
 /* reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0;padding:0;}
 blockquote,q{quotes:none;}
@@ -14,7 +14,7 @@ img{max-width:100%;}
 body {
 	font-size: 0.8924em;
 	color: #fff;
-	background: #2a2522 url('http://spa-and-fitness.co.uk/files/2012/10/Thorpe-Park-Hotel-Spa-Shoot-0141.jpg') no-repeat;
+	background: #2a2522 url('http://www.beau-beauty.com/images/beau-beauty-salon-ballymena-1.jpg') no-repeat;
 	background-size:100% 100%;
 	background-attachment: fixed;
 	background-position:center;	
@@ -33,8 +33,6 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px;}
 	overflow: visible;
 	position: relative;
 }
-
-
 .body{
 	position: relative;
 	height: 80%;
@@ -55,11 +53,15 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px;}
 .navbar{
 	width:100%;
 }
+.navbar .nav{
+	width:95%;
+	margin:auto;
+}
 .navbar li{
 	width:20%;
-	height:75px;
-	line-height: 75px;
-	font-size: 20pt;
+	height:55px;
+	line-height: 55px;
+	font-size: 18pt;
 	letter-spacing: 4px;
 	text-align: center;
 	float: left;
@@ -100,33 +102,35 @@ html,body{width:100%;height: 100%;position: absolute;min-height: 600px;}
 	position: relative;
 	z-index: 999;
 	width: 100%;
-	top: -200%
+	top: -250%
 }
 
 .header1{
 	margin:2% 0 0 0;
-	height: 38%;
+	height: 31%;
 	overflow: visible;
 	position: relative;
+	z-index: 99;
 }
 .navbar1{
-	width:20%;
+	width:16%;
 	height: auto;
 	overflow: hidden;
-	z-index: 100;
-	position: absolute;
-	left:40%;
+	z-index: 1001;
+	margin:auto;
 	top:2%;
 }
 .logo1{	
 	position: relative;
 	width:100%;
-	z-index: 99;
+
 	top: -50%;
 }
+
 /*dropdown menu*/
 ul.dropdown{
 	width: 100%;
+	z-index: 1000;
 	height: auto;
 	overflow: hidden;
 }
@@ -136,6 +140,10 @@ ul.dropdown li{
 	font-size: 1.75em;
 	text-align: center;
 	border-bottom:3px inset #ddd;
+	transition: all .2s ease;
+	-webkit-transition:all .2s ease;
+	-moz-transition:all .2s ease;
+	-o-transition:all .2s ease;
 }
 	ul.dropdown li:hover,.submenu li:hover{
 		background:#85910b;
@@ -196,6 +204,27 @@ ul.dropdown li{
 	float:right;
 	border-radius:5px;
 	width:33%
+}
+
+/*Product image*/
+.productimg{
+	float:left;
+	border: #fff solid 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.col-left-2{
+	width:20%;
+	height:auto;
+	float:left;
+	overflow:hidden;
+}
+.col-left-8{
+	width:75%;
+	margin-left:4%;
+	height:auto;
+	float:left;
+	overflow:hidden;
 }
 .col-left-3{
 	width:30%;
@@ -489,8 +518,8 @@ x:-o-prefocus, .lb-overlay img {
 	padding:1.5%; 
 }
 .contact-form{
-	position:relative;
-	padding-bottom:30px;
+	/*position:relative;*/
+	padding:0px;
 }
 .contact-form div{
 	padding:5px 0;
@@ -547,7 +576,7 @@ x:-o-prefocus, .lb-overlay img {
 	transition: 0.5s ease;
 	-o-transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;
-	position: absolute;
+	/*position: absolute;*/
 	right: 0;
 }
 .contact-form input[type="submit"]:hover{
@@ -661,14 +690,12 @@ x:-o-prefocus, .lb-overlay img {
 @media only screen and (max-width: 1280px) {
 	.wrap{
 		width:95%;
-		left:2.5%;
 	}
 
 }
 @media only screen and (max-width: 1024px) {
 	.wrap{
 		width:95%;
-		left:2.5%;
 	}
 
 	.navbar li{
@@ -676,7 +703,9 @@ x:-o-prefocus, .lb-overlay img {
 		line-height: 65px;
 		height: 65px;
 	}
-	
+	ul.dropdown li{
+		font-size:1.25em;
+		}
 	.lb-album li > a span {
 		line-height: 150px;
 	}
@@ -686,15 +715,14 @@ x:-o-prefocus, .lb-overlay img {
 @media only screen and (max-width: 800px) {
 	.wrap{
 		width:95%;
-		left:2.5%;
+	}
+	.navbar .nav{
+		width:100%;
 	}
 	.navbar1{
 		width:25%;
 		min-width: 145px;
 	}
-	ul.dropdown li{
-		font-size:1.5em;
-		}
 	.logo{
 		top:-175%;
 	}
@@ -703,7 +731,15 @@ x:-o-prefocus, .lb-overlay img {
 		line-height: 55px;
 		height: 55px;
 	}
-
+.col-left-2,.col-left-3,.col-left-7,.col-left-8,{
+	width: 100%;
+	margin:0 0 5px 0;
+}
+.productimg{
+	width:100%;
+	margin:0;
+	padding:0;
+}
 	.about-desc {
 		float: none;
 		width:100%;
@@ -722,7 +758,9 @@ x:-o-prefocus, .lb-overlay img {
 @media only screen and (max-width: 640px){
 	.wrap{
 		width:100%;
-		left:0%;
+	}
+	.navbar .nav{
+		width:100%;
 	}
 	.logo{
 		top:-150%;
@@ -743,11 +781,9 @@ x:-o-prefocus, .lb-overlay img {
 .aboutbrivates{
 	width:100%
 }
-.col-left-3{
-	width:100%;
-}
-.col-left-7{
+.col-left-2,.col-left-3,.col-left-7,.col-left-8{
 	width: 100%;
+	margin:0 0 5px 0;
 }
 
 	.col {
