@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  应聘职位:
+  <%= @resume.position.title %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @resume.title %>
 </p>
@@ -15,5 +20,3 @@
   <%= link_to 'Download', @resume.avatar.url %>
 </p>
 
-<%= link_to 'Edit', edit_resume_path(@resume) %> |
-<%= link_to 'Back', resumes_path %>

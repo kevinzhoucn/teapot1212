@@ -38,6 +38,20 @@
             <span><input type="submit" value="提交"></span>
         </div>
       </form>
+      <%= simple_form_for(@enquiry) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :name, label: "您的名称" %>
+          <%= f.input :phone, label: "E-MAIL" %>
+          <%= f.input :email, label: "联系电话" %>
+          <%= f.input :message, label: "给我们留言" %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, '提交' %>
+        </div>
+      <% end %>
     </div>
   </div>
 

@@ -1,5 +1,6 @@
 class ResumesController < ApplicationController
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
+  before_action :set_position, only: [:create]
 
   respond_to :html
 
@@ -22,6 +23,7 @@ class ResumesController < ApplicationController
 
   def create
     @resume = Resume.new(resume_params)
+    @resume[:position_id] = @position.id
 
     if @resume.save
       flash[:notice] = 'Resume was successfully created.'
@@ -43,10 +45,15 @@ class ResumesController < ApplicationController
 
   private
     def set_resume
-      @resume = Resume.find(params[:id])
+      @resume = Resume.find(params[:id])      
+      # @position = Position.find(params[:position_id])
+    end
+
+    def set_position
+      @position = Position.find(params[:position_id])
     end
 
     def resume_params
-      params.require(:resume).permit(:title, :content, :avatar)
+      params.require(:resume).permit(:name, :phone, :email, :avatar, :content)
     end
 end

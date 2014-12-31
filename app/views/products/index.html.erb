@@ -21,9 +21,9 @@
     <div id="content1" class="tabcontent" style="display:block">
       <section>
         <ul class="lb-album">
-          <% @products.each do |product| %>
+          <% @product_new.each do |product| %>
             <li>
-              <a href="<%= product %>">
+              <a href="<%= product_path(product) %>">
                 <img src="<%= product.avatar.url %>" />
                 <span><%= product.name %></span>
               </a>
@@ -50,7 +50,7 @@
         <ul class="lb-album">
           <% @product_special.each do |product| %>
             <li>
-              <a href="#<%= product.name %>">
+              <a href="<%= product_path(product) %>">
                 <img src="<%= product.avatar.url %>" />
                 <span><%= product.name %></span>
               </a>
@@ -58,14 +58,14 @@
           <% end %>
         </ul>
       </section>
-    </div>
+    </div> 
 
     <div id="content3" class="tabcontent">
       <section>
         <ul class="lb-album">
           <% @product_star.each do |product| %>
             <li>
-              <a href="#<%= product.name %>">
+              <a href="<%= product_path(product) %>">
                 <img src="<%= product.avatar.url %>" />
                 <span><%= product.name %></span>
               </a>

@@ -18,5 +18,7 @@ class FrontController < ApplicationController
     @contact_email = SiteConfig.contact_email
     @contact_qq = SiteConfig.contact_qq
     @contact_webchat = SiteConfig.contact_webchat
+
+    @enquiry = Enquiry.new
   end
 end

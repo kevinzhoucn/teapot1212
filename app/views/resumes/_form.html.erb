@@ -1,13 +1,31 @@
-<%= simple_form_for(@resume) do |f| %>
+<%= simple_form_for([:position, @resume]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :content %>
-    <%= f.input :avatar %>
+    <div>
+      <label>名字:</label>
+      <%= f.input_field :name %>
+    </div>
+
+    <div>
+      <label>电话:</label>
+      <%= f.input_field :phone %>
+    </div>
+    <div>
+      <label>邮箱:</label>
+      <%= f.input_field :email %>
+    </div>
+    <div>
+      <label>个人描述:</label>
+      <%= f.input_field :content, as: :text %>
+    </div>
+    <div>
+      <label>附件:</label>
+      <%= f.input_field :avatar %>
+    </div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, '提交' %>
   </div>
 <% end %>

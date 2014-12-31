@@ -8,6 +8,11 @@ class Notifier < ActionMailer::Base
   #
   def resume_received(resume)
     @resume = resume
-    mail :to => 'test2w3try@163.com', :subject => 'Resume recevied Confirmation!'
+    mail :to => 'admin@brivates.com', :subject => 'Resume recevied Confirmation!'
+  end
+
+  def enquiry_received(enquiry)
+    @enquiry = enquiry
+    mail :to => 'admin@brivates.com', :subject => 'Enquiry recevied Confirmation!'
   end
 end

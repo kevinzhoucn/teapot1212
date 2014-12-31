@@ -1,12 +1,17 @@
 Rails40Starter::Application.routes.draw do
+  resources :enquiries
+
   resources :affiliates
 
   resources :products
 
-  resources :positions, only: [:index, :show]
+  resources :positions, only: [:index, :show] do
+    resources :resumes
+  end
 
-  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :resumes
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'  
+  resources :resumes, only: [:show]
+
   resources :news
   resources :groups
   
