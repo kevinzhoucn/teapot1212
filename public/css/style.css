@@ -699,22 +699,30 @@ x:-o-prefocus, .lb-overlay img {
 	}
 
 	.navbar li{
-		font-size: 135%;
-		line-height: 65px;
-		height: 65px;
+		font-size: 125%;
 	}
 	ul.dropdown li{
 		font-size:1.25em;
-		}
+	}
 	.lb-album li > a span {
 		line-height: 150px;
 	}
 }
+
+@media only screen and (max-width: 960px){
+		.logo{
+		top:-200%;
+	}
+}
+
 /*  GO FULL WIDTH AT LESS THAN 800 PIXELS */
 
 @media only screen and (max-width: 800px) {
 	.wrap{
 		width:95%;
+	}
+	.header{
+		margin-top: 5%;
 	}
 	.navbar .nav{
 		width:100%;
@@ -727,9 +735,9 @@ x:-o-prefocus, .lb-overlay img {
 		top:-175%;
 	}
 	.navbar li{
-		font-size: 125%;
-		line-height: 55px;
-		height: 55px;
+		font-size: 120%;
+		line-height: 45px;
+		height: 45px;
 	}
 .col-left-2,.col-left-3,.col-left-7,.col-left-8,{
 	width: 100%;
