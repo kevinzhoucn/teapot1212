@@ -171,6 +171,12 @@ ul.dropdown li{
 	line-height: 1.8em;
 	width: auto;
 }
+.txt_h h3{
+	font-size: 1.5em;
+	color:#ffffff;
+	line-height: 1.8em;
+	width: auto;
+}
 
 /*submenu appearance*/
 .submenu{
@@ -239,6 +245,19 @@ ul.dropdown li{
 	float:left;
 	overflow:hidden;
 }
+.col-left-4{
+	width:40%;
+	height:auto;
+	float:left;
+	overflow:hidden;
+}
+.col-left-6{
+	width:58%;
+	margin-left: 2%;
+	height:auto;
+	float:left;
+	overflow:hidden;
+}
 
 /*main*/
 .main{
@@ -248,12 +267,12 @@ ul.dropdown li{
 	margin: 0 auto;
 }
 .lb-album li {
-	width: 23.33333%;
+	width: 31.33333%;
 	float: left;
 	margin: 0% 0% 1.5% 1.5%;
 	position: relative;
 }
-.lb-album li:nth-child(4), .lb-album li:nth-child(8), .lb-album li:nth-child(12) {
+.lb-album li:nth-child(3), .lb-album li:nth-child(6), .lb-album li:nth-child(9) {
 	margin-right: 0;
 }
 .lb-album li > a, .lb-album li > a img {
@@ -704,6 +723,7 @@ x:-o-prefocus, .lb-overlay img {
 	ul.dropdown li{
 		font-size:1.25em;
 	}
+
 	.lb-album li > a span {
 		line-height: 150px;
 	}
@@ -739,7 +759,7 @@ x:-o-prefocus, .lb-overlay img {
 		line-height: 45px;
 		height: 45px;
 	}
-.col-left-2,.col-left-3,.col-left-7,.col-left-8,{
+.col-left-2,.col-left-3,.col-left-4,.col-left-6,.col-left-7,.col-left-8{
 	width: 100%;
 	margin:0 0 5px 0;
 }
@@ -756,6 +776,9 @@ x:-o-prefocus, .lb-overlay img {
 	.about-img {
 		float: none;
 		width: 100%;
+	}
+	.lb-album li{
+	width: 48.33333%;
 	}
 	.lb-album li > a span {
 		line-height: 100px;
@@ -776,6 +799,10 @@ x:-o-prefocus, .lb-overlay img {
 	.navbar li{
 		border-radius: 0px !important;
 		letter-spacing: 1px;
+		font-size: 110%;
+		letter-spacing: 0px;
+		line-height: 40px;
+		height: 40px;
 	}
 .submenu{
 	float: none;
@@ -789,7 +816,7 @@ x:-o-prefocus, .lb-overlay img {
 .aboutbrivates{
 	width:100%
 }
-.col-left-2,.col-left-3,.col-left-7,.col-left-8{
+.col-left-2,.col-left-3,.col-left-4,.col-left-6,.col-left-7,.col-left-8{
 	width: 100%;
 	margin:0 0 5px 0;
 }
@@ -812,4 +839,9 @@ x:-o-prefocus, .lb-overlay img {
 
 @media only screen and (max-width: 480px) {
 	/*to be defined later*/
+	.lb-album li{
+	width: 90%;
+	text-align: center;
+	padding:0;
+	}
 }

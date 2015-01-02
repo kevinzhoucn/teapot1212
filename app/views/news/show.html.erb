@@ -1,16 +1,22 @@
 <div class="content txt_h">
-<p id="notice"><%= notice %></p>
+  <div class="submenu">
+    <ul>
+      <li><a href="/about"><a href="/about">企业形象</a></li>
+      <li class="current"><a href="/corpnews">企业新闻</a></li>
+      <li><a href="/positions">在线招聘</a></li>
+    </ul>
+  </div>
+  <h2>美丽资讯</h2>
+  <hr>
+  
+  <h3><%= @news.title %></h3>
+  <p>
+    <%= @news.content %>
+  </p>
+  <div class="btn">
+    <a href="#" onclick="window.history.go(-1);return false;">返回</a>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @news.content %>
-</p>
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%#= link_to 'Edit', edit_news_path(@news) %>
+<%#= link_to 'Back', news_index_path %>
 </div>

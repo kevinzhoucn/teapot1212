@@ -1,18 +1,35 @@
 <div class="content txt_h">
-<p id="notice"><%= notice %></p>
+  <div class="submenu">
+    <ul>      
+      <li><a href="/about"><a href="/about">企业形象</a></li>
+      <li><a href="/corpnews">企业新闻</a></li>
+      <li class="current"><a href="/positions">在线招聘</a></li>
+    </ul>
+  </div>
+  <h2>美丽资讯</h2>
+  <hr>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+
+  <h3>职位名称：
   <%= @position.title %>
-</p>
+  </h3>
+  <p style="font-size:125%">
+    职位状态：<%= @position.status %>
+  </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @position.content %>
-</p>
+  <h3>职责描述：</h3>
+  <div><%= @position.content %></div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @position.status %>
-</p>
+  
+  <div class="btn btn-default">
+    <a href="#" onclick="window.history.go(-1);return false;">返回上一页</a>
+  </div>
+  <div class="btn btn-default">
+    <a href="#">立即申请</a>
+
+    <%#= link_to '立即申请', new_position_resume_path(position) %> <!--使用这个方法会导致报错 -->
+  </div>
+
+
 </div>
