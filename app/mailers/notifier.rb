@@ -15,4 +15,9 @@ class Notifier < ActionMailer::Base
     @enquiry = enquiry
     mail :to => 'admin@brivates.com', :subject => 'Enquiry recevied Confirmation!'
   end
+  # 20150105 Albert 添加了招商加盟email提醒功能
+  def affiliate_received(affiliate)
+    @affiliate = affiliate
+    mail :to => 'admin@brivates.com', :subject => '收到一个新的加盟申请'
+  end
 end

@@ -215,9 +215,16 @@ ul.dropdown li{
 /*Product image*/
 .productimg{
 	float:left;
+	margin:0 10px 0 5px;
+}
+.productimg img{
+	width: 100%;
 	border: #fff solid 5px;
 	border-radius: 5px;
-	margin-right: 5px;
+}
+.productcontent{
+	margin-left:5px;
+	float:left;
 }
 .col-left-2{
 	width:20%;
@@ -841,7 +848,6 @@ x:-o-prefocus, .lb-overlay img {
 	/*to be defined later*/
 	.lb-album li{
 	width: 90%;
-	text-align: center;
 	padding:0;
 	}
 }
