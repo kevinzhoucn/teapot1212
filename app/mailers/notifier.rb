@@ -1,3 +1,4 @@
+# coding: utf-8
 class Notifier < ActionMailer::Base
   default from: "tr_reuters@163.com"
 

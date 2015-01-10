@@ -22,8 +22,12 @@ class Cpanel::SiteConfigsController < Cpanel::ApplicationController
 
   def create
     @cpanel_site_config = SiteConfig.new(cpanel_site_config_params)
-    @cpanel_site_config.save
-    respond_with(@cpanel_site_config)
+    # redirect_to cpanel_site_configs_path if @cpanel_site_config.save
+    if @cpanel_site_config.save
+      redirect_to cpanel_site_configs_url
+    end
+    # respond_with(@cpanel_site_config)
+
   end
 
   def update

@@ -3,10 +3,9 @@
   <%= f.error_notification %>
 
     <h3>加盟申请</h3>
-    <label>标题</label>
-    <%= f.input :title %>
+    <%= f.input :title, label: '标题' %>
     <label>留言:</label>
     <%= f.input_field :content, as: :text %>
-    <%= f.button :submit %>
+    <%= f.button :submit, '提交' %>
 <% end %>
 </div>

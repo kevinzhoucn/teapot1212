@@ -25,7 +25,7 @@ class AffiliatesController < ApplicationController
 
   def create
     @affiliate = Affiliate.new(affiliate_params)
-    @affiliate.save
+    Notifier.affiliate_received(@affiliate).deliver if @affiliate.save
     respond_with(@affiliate)
   end
 
