@@ -22,8 +22,11 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
 
   def create
     @cpanel_position = Position.new(cpanel_position_params)
-    @cpanel_position.save
-  respond_with([:cpanel, @cpanel_position])
+    if @cpanel_position.save
+      redirect_to cpanel_positions_path
+    end
+
+    #respond_with([:cpanel, @cpanel_position])
   end
 
   def update
@@ -42,6 +45,6 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
     end
 
     def cpanel_position_params
-      params.require(:position).permit(:title, :content, :status)
+      params.require(:position).permit(:title, :content, :status, :image_url_type)
     end
 end

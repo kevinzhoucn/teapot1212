@@ -4,7 +4,11 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :content %>
-    <%= f.input :status %>
+    <label>Status</label>
+    <%= f.collection_radio_buttons :status, [ ['招聘中', '0'], ['暂停招聘', '1'] ], :last, :first, checked: 0 %>
+    <br>
+    <label>type</label>
+    <%= f.collection_radio_buttons :image_url_type, [ ['员工', '0'], ['店长', '1'] ], :last, :first, checked: 0 %>
   </div>
 
   <div class="form-actions">
