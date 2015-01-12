@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Brivates Control Panel</title>
+    <title>Brivates 网站控制台</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= render_stylesheets %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="/css/cpanelstyle.css" />
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
   </head>
   <body class="<%= controller_name %>">
-
-    <div style="float:left;width:100px;height:500px">
-      <p>left cpanel</p>
-      <ul>
-        <li>
-          item1
-        </li>
-      </ul>
+    <div class="container">
+      <div class="cpanel-header">
+        <div class="brivates-logo"></div>
+        <div class="cpanel-title-text">
+          <h2>Brivates网站控制台</h2>
+          <div style="position:absolute;width:auto;right:10px;bottom:10px">
+          修改密码 | 注销
+          </div>
+        </div>
+      </div>
+      <div class="cpanel-body">
+        <div class="cpanel-body-left">
+          <%= render partial: 'common/theme/cpanel_left' %>
+        </div>
+        <div class="cpanel-body-right">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="cpanel-footer">
+        版权所有© 波蒂斯抗衰中心 | 技术支持信息
+      </div>
     </div>
-    <%= yield %>
-
   </body>
 </html>
