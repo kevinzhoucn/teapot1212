@@ -4,7 +4,9 @@ class PositionsController < ApplicationController
   respond_to :html
 
   def index
-    @positions = Position.all
+    @positions = Position.all.ongoing
+    @position_image_manager = SiteConfig.position_image_manager
+    @position_image_employee = SiteConfig.position_image_employee
     respond_with(@positions)
   end
 

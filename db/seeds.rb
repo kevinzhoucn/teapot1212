@@ -40,3 +40,6 @@ SiteConfig.save_default("contact_phone", "1234567")
 SiteConfig.save_default("contact_email", "123@example.com")
 SiteConfig.save_default("contact_qq", "1234567")
 SiteConfig.save_default("contact_webchat", "1234567")
+
+SiteConfig.save_default("position_image_manager", "")
+SiteConfig.save_default("position_image_employee", "")
