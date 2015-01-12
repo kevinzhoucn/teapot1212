@@ -19,6 +19,7 @@ Rails40Starter::Application.routes.draw do
     get '/' => 'front#index', as: :front_index
     resources :site_configs
     resources :news
+    resources :products
     resources :positions
     resources :slides
   end

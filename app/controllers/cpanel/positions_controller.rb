@@ -36,7 +36,8 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
 
   def destroy
     @cpanel_position.destroy
-    respond_with(@cpanel_position)
+    redirect_to cpanel_positions_path
+    #respond_with(@cpanel_position)
   end
 
   private
