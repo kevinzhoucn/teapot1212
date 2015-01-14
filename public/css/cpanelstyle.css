@@ -179,16 +179,19 @@ h2{font-size: 125%}
 .listing ul{
   margin:0 10px;
   padding:0;
+  overflow: hidden;
+  height: auto;
 }
 .listing ul li{
   line-height: 30px;
   height: 30px;
+  overflow: hidden;
   width: 70%;
   border: #fff solid;
   border-width: 0px 0px 1px 0px;
 }
 .listing .list-title{
-  min-width: 200px;
+  width: 300px;
   overflow:hidden;
   float:left;
   margin-right: 20px;
