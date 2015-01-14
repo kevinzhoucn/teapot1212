@@ -183,12 +183,12 @@ h2{font-size: 125%}
 .listing ul li{
   line-height: 30px;
   height: 30px;
-  width:380px;
+  width: 70%;
   border: #fff solid;
   border-width: 0px 0px 1px 0px;
 }
 .listing .list-title{
-  width:200px;
+  min-width: 200px;
   overflow:hidden;
   float:left;
   margin-right: 20px;
