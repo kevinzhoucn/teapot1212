@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :content %>
+    <%= f.input :content, as: :text %>
     <%= f.input :status %>
     <%= f.input :image_url_type, collection: [ ['0', '店长'], ['1', '员工'] ] %>
   </div>

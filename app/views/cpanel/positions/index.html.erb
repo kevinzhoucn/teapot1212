@@ -1,31 +1,28 @@
-<h1>Listing positions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Status</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h1>设置在线招聘</h1>
+<hr>
+<div class="listing">
+  <div style="width:300px">
+    <h2>招聘职位列表</h2>
+  </div>
+  <ul style="list-style:none">
     <% @cpanel_positions.each do |position| %>
-      <tr>
-        <td><%= position.title %></td>
-        <td><%= position.content %></td>
-        <td><%= position.status %></td>
-        <td><%= link_to 'Show', cpanel_position_path(position) %></td>
-        <td><%= link_to 'Edit', edit_cpanel_position_path(position) %></td>
-        <td><%= link_to 'Destroy', cpanel_position_path(position), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <li>
+      <div class="list-title" style="width:100px">
+        <%= position.title %>
+      </div>
+      <div style="width:auto;float:left">
+        <%= position.status %>
+      </div>
+      <div class="list-action">
+        <%= link_to '编辑', edit_cpanel_position_path(position) %>
+      </div>
+      <div class="list-action">
+        <%= link_to '删除', cpanel_position_path(position), method: :delete, data: { confirm: '确定要删除这个职位吗？' } %>
+      </div>
+    </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Position', new_cpanel_position_path %>
+  </ul>
+  <div style="height:35px;line-height:35px;">
+    <%= link_to '添加新职位', new_cpanel_position_path %>
+  </div>
+</div>
