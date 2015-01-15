@@ -31,7 +31,8 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
 
   def update
     @cpanel_position.update(cpanel_position_params)
-    respond_with(@cpanel_position)
+    redirect_to cpanel_positions_path
+    # respond_with(@cpanel_position)
   end
 
   def destroy
