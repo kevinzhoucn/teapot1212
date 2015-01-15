@@ -12,7 +12,7 @@ body{
 a:hover{
   color:brown;
 }
-form input{
+form input, textarea{
   color:#333;
 }
 h1{font-size: 150%}

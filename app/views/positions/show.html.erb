@@ -14,21 +14,18 @@
   <h3>职位名称：
   <%= @position.title %>
   </h3>
-  <p style="font-size:125%">
+  <!-- <p style="font-size:125%">
     职位状态：<%= @position.status %>
-  </p>
+  </p> -->
 
   <h3>职责描述：</h3>
-  <div><%= @position.content %></div>
+  <div><%= @position.content.html_safe %></div>
 
-  
   <div class="btn btn-default">
     <a href="#" onclick="window.history.go(-1);return false;">返回上一页</a>
   </div>
   <div class="btn btn-default">
-    <a href="#">立即申请</a>
-
-    <%#= link_to '立即申请', new_position_resume_path(position) %> <!--使用这个方法会导致报错 -->
+    <%= link_to '申请职位', new_position_resume_path(@position) %>
   </div>
 
 

@@ -62,7 +62,10 @@ class Cpanel::SiteConfigsController < Cpanel::ApplicationController
 
   def update
     @cpanel_site_config.update(cpanel_site_config_params)
-    respond_with(@cpanel_site_config, location: cpanel_site_config_path)
+    # albert注释掉了 respond_with(@cpanel_site_config, location: cpanel_site_config_path)
+    if @cpanel_site_config.save
+      redirect_to cpanel_site_configs_url
+    end
   end
 
   def destroy

@@ -10,13 +10,6 @@
 </style>
 <h1>网站基本信息设置</h1>
 <hr />
-<!-- <ul>
-  <%# @cpanel_site_configs.each do |cpanel_site_config| %>
-    <li>
-      <%#= cpanel_site_config.value %> | <%#= link_to '编辑', edit_cpanel_site_config_path(cpanel_site_config) %>
-    </li>
-  <%# end %>
-</ul>  -->
 
 <div id="l-container">
   <ul>
@@ -29,30 +22,39 @@
 <div class="tabs">
   <div id="content1" style="display:block">
     <!--about_title | 企业形象标题 <br> 这个key不要了，删掉-->
-    企业形象图片 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_about_image_url) %>
-    企业形象内容
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_about_content_html) %>
+    <li>
+      <%= link_to '编辑企业形象图片', edit_cpanel_site_config_path(@cpanel_about_image_url) %>
+    </li>
+    <li>
+      <%= link_to '编辑企业形象内容', edit_cpanel_site_config_path(@cpanel_about_content_html) %>
+    </li>
   </div>
 
   <div id="content2">
-    affiliate_advantage | 加盟优势内容 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_affiliate_advantage) %>
-    affiliate_policy | 加盟政策内容 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_affiliate_policy) %>
+    <li>
+      <%= link_to '编辑加盟优势', edit_cpanel_site_config_path(@cpanel_affiliate_advantage) %><br>
+    </li>
+    <li>
+      <%= link_to '编辑加盟政策', edit_cpanel_site_config_path(@cpanel_affiliate_policy) %><br>
+    </li>
   </div>
 
   <div id="content3">
-    contact_address | 联系地址 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_address) %>
-    contact_phone | 联系电话 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_phone) %>
-    contact_email | 联系邮箱 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_email) %>
-    contact_email | 联系qq <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_qq) %>
-    contact_webchat | 联系微信 <br>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_webchat) %>
+    <li>
+      <%= link_to '编辑联系地址', edit_cpanel_site_config_path(@cpanel_contact_address) %>
+    </li>
+    <li>
+      <%= link_to '编辑联系电话', edit_cpanel_site_config_path(@cpanel_contact_phone) %>
+    </li>
+    <li>
+      <%= link_to '编辑联系邮箱', edit_cpanel_site_config_path(@cpanel_contact_email) %>
+    </li>
+    <li>
+      <%= link_to '编辑联系qq', edit_cpanel_site_config_path(@cpanel_contact_qq) %>
+    </li>
+    <li>
+      <%= link_to '编辑联系微信', edit_cpanel_site_config_path(@cpanel_contact_webchat) %>
+    </li>
   </div>
 </div>
 <script type="text/javascript" src="/js/tabbing.js"></script>
