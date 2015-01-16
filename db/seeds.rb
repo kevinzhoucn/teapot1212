@@ -41,5 +41,11 @@ SiteConfig.save_default("contact_email", "123@example.com")
 SiteConfig.save_default("contact_qq", "1234567")
 SiteConfig.save_default("contact_webchat", "1234567")
 
+
 SiteConfig.save_default("position_image_manager", "/img/manager.jpg")
 SiteConfig.save_default("position_image_employee", "/img/staff.jpg")
+
+User.delete_all
+admin = User.create!(email: "admin@brivates.com", password: "password")
+admin.add_role :admin
+puts 'admin: ' << admin.email
