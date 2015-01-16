@@ -19,7 +19,7 @@
         <% end %>
         <img src="<%= position_image_url %>" class="aboutbrivates" style="border:5px solid #fff;box-shadow:0 0 20px #999" />
         <h2><%= position.title %></h2>
-        <p style="font-size:1.2em"><%= position.content %></p>
+        <p style="font-size:1.2em"><%= position.content.html_safe %></p>
         <div class="btn">
           <%= link_to '详细信息', position %>
         </div>

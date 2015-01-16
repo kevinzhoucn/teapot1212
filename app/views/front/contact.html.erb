@@ -6,11 +6,11 @@
     </iframe>
     <div>
       <h2>公司地址</h2>
-      <p><%= @contact_address %></p>
-      <p>联系电话：<%= @contact_phone %></p>
-      <p>Email：<%= @contact_email %></p>
-      <p>QQ：<%= @contact_qq %></p>
-      <p>微信：<%= @contact_webchat %></p>
+      <p><%= @contact_address.html_safe %></p>
+      <p>联系电话：<%= @contact_phone.html_safe %></p>
+      <p>Email：<%= @contact_email.html_safe %></p>
+      <p>QQ：<%= @contact_qq.html_safe %></p>
+      <p>微信：<%= @contact_webchat.html_safe %></p>
     </div>
   </div>
   <div class="col-left-6">

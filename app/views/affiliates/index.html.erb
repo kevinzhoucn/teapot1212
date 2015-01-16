@@ -19,11 +19,11 @@
   </div>
   <div class="tabs col-left-8">
     <div id="content1" class="tabcontent" style="display:block">
-      <%= @affiliate_advantage %>
+      <%= @affiliate_advantage.html_safe %>
     </div>
 
     <div id="content2" class="tabcontent">
-      <%= @affiliate_policy %>
+      <%= @affiliate_policy.html_safe %>
     </div>
 
     <div id="content3" class="tabcontent">
