@@ -16,8 +16,11 @@
         <div class="brivates-logo"></div>
         <div class="cpanel-title-text">
           <h2>Brivates网站控制台</h2>
-          <div style="position:absolute;width:auto;right:18px;bottom:10px">
-          修改密码 | 注销
+          <div style="position:absolute;width:auto;right:18px;bottom:10px">          
+          修改密码
+          <%#= link_to '修改密码', edit_user_password_path, { method: :get } %>
+           | 
+          <%= link_to '注销', destroy_user_session_path, { method: :delete} %>
           </div>
         </div>
       </div>
