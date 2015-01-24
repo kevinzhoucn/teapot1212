@@ -71,6 +71,6 @@ test:
 production:
   sessions:
     default:
-      database: teapot_1212_production
+      database: teapot_1212_test_production
       hosts:
         - localhost:27017

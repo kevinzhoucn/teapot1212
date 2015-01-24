@@ -13,6 +13,7 @@
       <div style="width:auto;float:left">
         <%= position.status %>
       </div>
+      <%= image_tag position.avatar.url(:thumb) %>
       <div class="list-action">
         <%= link_to '编辑', edit_cpanel_position_path(position) %>
       </div>

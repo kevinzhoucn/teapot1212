@@ -11,7 +11,8 @@
 </p>
 
 <div>
-  <img src="<%= @cpanel_slide.image_url %>">
+  <img src="<%= @cpanel_slide.avatar.url(:thumb) %>"><br>
+  <img src="<%= @cpanel_slide.avatar.url(:medium) %>"><br>
 </div>
 
 <%= link_to 'Edit', edit_cpanel_slide_path(@cpanel_slide) %> |

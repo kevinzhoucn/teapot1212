@@ -43,6 +43,6 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
     end
 
     def cpanel_slide_params
-      params.require(:slide).permit(:title, :image_url)
+      params.require(:slide).permit(:title, :avatar)
     end
 end
