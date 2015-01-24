@@ -2,7 +2,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :image_url, label: "图片地址" %>
+    <%#= f.input :image_url, label: "图片地址" %>
+    <%= f.input :avatar, label: "上传图片：" %>
     <%= f.input :title, label: "文字说明",as: :text %>
   </div>
 
@@ -11,5 +12,5 @@
   </div>
 <% end %>
 <script>
-CKEDITOR.replace('slide_title');
+ CKEDITOR.replace('slide_title');
 </script>

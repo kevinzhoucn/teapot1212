@@ -9,6 +9,7 @@
     <br>
     <label>职位类型</label>
     <%= f.collection_radio_buttons :image_url_type, [ ['员工', '0'], ['店长', '1'] ], :last, :first, checked: 0 %>
+    <%= f.input :avatar, label: "上传职位图片：" %>
   </div>
 
   <div class="form-actions">
