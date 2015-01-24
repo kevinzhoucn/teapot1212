@@ -12,11 +12,11 @@
   <div>
     <% @positions.each do |position| %>
       <div style="display:block;height:auto;overflow:hidden;margin:10px 0 10px 0;padding-bottom:15px;">
-        <% if position.image_url_type == 0 %>
-          <% position_image_url = @position_image_employee %>
-        <% else %>
-          <% position_image_url = @position_image_manager %>
-        <% end %>
+        <%# if position.image_url_type == 0 %>
+          <%# position_image_url = @position_image_employee %>
+        <%# else %>
+          <%# position_image_url = @position_image_manager %>
+        <%# end %>
         <img src="<%= position.avatar.url(:thumb) %>" class="aboutbrivates" style="border:5px solid #fff;box-shadow:0 0 20px #999" />
         <h2><%= position.title %></h2>
         <p style="font-size:1.2em"><%= position.content.html_safe %></p>

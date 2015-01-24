@@ -15,7 +15,6 @@
    top: 0;
    cursor:default;
    overflow:hidden;
-   min-height: 550px;
 }
 table, ul.brivates-hmenu
 {
@@ -979,6 +978,7 @@ ul.brivates-hmenu ul
    cursor:auto;
    width: 1000px;
    z-index: auto !important;
+    min-height: 550px;
 }
 
 .brivates-layout-wrapper
