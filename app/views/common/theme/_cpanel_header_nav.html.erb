@@ -1,0 +1,25 @@
+<header class="brivates-header">
+  <div class="brivates-shapes">
+    <div class="brivates-textblock brivates-object1785836730" data-left="3.47%">
+        <div class="brivates-object1785836730-text-container">
+        <div class="brivates-object1785836730-text"></div>
+      </div>
+    </div>
+  </div>
+  <h1 class="brivates-headline" data-left="93.91%">
+    <a href="#">Brivates Web Console</a>
+  </h1>
+</header>
+<nav class="brivates-nav">
+  <div style="float:left;line-height:45px;font-size:30px;font-weight:bold;margin-left:10px">
+    欢迎来到波蒂斯网站控制台
+  </div>
+  <ul class="brivates-hmenu">
+    <li>
+      <%= link_to '修改密码', edit_user_password_path %>
+    </li>
+    <li>
+      <%= link_to '安全退出', destroy_user_session_path, { method: :delete} %>
+    </li>
+  </ul> 
+</nav>

@@ -15,27 +15,7 @@
   </head>
   <body>
     <div id="brivates-main">
-      <header class="brivates-header">
-        <div class="brivates-shapes">
-          <div class="brivates-textblock brivates-object1785836730" data-left="3.47%">
-              <div class="brivates-object1785836730-text-container">
-              <div class="brivates-object1785836730-text"></div>
-            </div>
-          </div>
-        </div>
-        <h1 class="brivates-headline" data-left="93.91%">
-          <a href="#">Brivates Web Console</a>
-        </h1>
-      </header>
-      <nav class="brivates-nav">
-        <div style="float:left;line-height:45px;font-size:30px;font-weight:bold;margin-left:10px">
-          欢迎来到波蒂斯网站控制台
-        </div>
-        <ul class="brivates-hmenu">
-          <li><a href="#" class="">修改密码</a></li>
-          <li><a href="#" class="">安全退出</a></li>
-        </ul> 
-      </nav>
+      <%= render partial: 'common/theme/cpanel_header_nav' %>
       <div class="brivates-sheet clearfix">
         <div class="brivates-layout-wrapper">
           <div class="brivates-content-layout">
@@ -43,29 +23,18 @@
               <div class="brivates-layout-cell brivates-sidebar1">
                 <div class="brivates-vmenublock clearfix">
                   <div class="brivates-vmenublockcontent">
-                    <ul class="brivates-vmenu">
-                      <li><a href="/cpanel" class="">控制台首页</a></li>
-                      <li><a href="/cpanel/site_configs" class="">设置网站基本信息</a></li>
-                      <li><a href="/cpanel/slides" class="">设置图片轮播</a></li>
-                      <li><a href="/cpanel/products" class="active">产品管理</a></li>
-                      <li><a href="/cpanel/positions">在线招聘管理</a></li>
-                      <li><a href="/cpanel/news">编辑企业新闻</a></li>
-                    </ul>
+                    <%= render partial: 'common/theme/cpanel_left' %>
                   </div>
                 </div>
               </div>
               <div class="brivates-layout-cell brivates-content">
                 <article class="brivates-post brivates-article">
                   <div class="brivates-postcontent brivates-postcontent-0 clearfix">
-                    <p>
-                      测试文字 测试文字
-                      <br/>
                       <%= yield %>
-                    </p>
                   </div>
                 </article>
               </div>
-            </div>
+            </div><!--end of brivates-content-layout-row-->
           </div>
         </div>
       </div><!--end of .brivates-sheet clearfix-->
