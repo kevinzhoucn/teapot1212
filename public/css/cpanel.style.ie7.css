@@ -1,0 +1,135 @@
+/* Created by Artisteer v4.1.0.59782 */
+
+.brivates-header, #brivates-header-bg, .brivates-layout-cell, .brivates-layout-wrapper, .brivates-footer, .brivates-nav, #brivates-hmenu-bg, .brivates-sheet,
+.clearfix {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+
+.brivates-textblock > div {
+   display: block;
+   line-height: normal;
+   zoom: 1;
+}
+
+.brivates-header
+{
+   z-index: 1;
+   background-image: [headerimage];
+   background-position: [headerposition];
+}
+
+#brivates-header-bg 
+{
+   display: none;
+}
+
+.brivates-hmenu>li, .brivates-hmenu>li>a
+{
+   display: inline !important;
+   zoom: 1;
+   float: none !important;
+   vertical-align: top;
+}
+ul.brivates-hmenu, ul.brivates-hmenu ul {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+#brivates-hmenu-bg 
+{
+   display: none;
+}
+
+ul.brivates-hmenu>li:first-child {
+   padding-right:6px;
+}
+ul.brivates-hmenu>li{
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('span'),firstChild).className='brivates-hmenu-separator');
+}
+ul.brivates-hmenu>li>span.brivates-hmenu-separator
+{
+   position:absolute;
+   display: block;
+   top:0;
+   left:  -6px;
+   width: 6px;
+   height: 41px;
+   background: url('images/menuseparator.png') center center no-repeat;
+}
+ul.brivates-hmenu>li:first-child>span.brivates-hmenu-separator
+{
+   display:none;
+}
+
+ul.brivates-hmenu ul{
+   background-color: #C0E2A2 !important;
+}
+
+.brivates-content-layout, .brivates-content-layout-row, .brivates-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.brivates-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+
+ul.brivates-vmenu, ul.brivates-vmenu ul, ul.brivates-vmenu li{
+   zoom: 1;
+}
+
+ul.brivates-vmenu ul 
+{
+}
+
+input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+* html input[type="text"]
+{
+   margin :0;
+}
+
+form.brivates-search>input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+form.brivates-search div>input[type="text"]
+{
+   width: 100%;
+}
+
+* html form.brivates-search>input[type="text"] 
+{
+   margin :0;
+}
+
+.brivates-postheadericons span{
+   zoom: 1;
+}
+.brivates-postcontent {
+   height: 1%;
+}
+
+.brivates-postfootericons span{
+   zoom: 1;
+}
+.close-alt, .arrow-right-alt, .arrow-left-alt {
+   display: block !important;
+}
+.cw, .ccw {
+   display: none !important;
+}
+
+.brivates-content 
+{
+   width: auto;
+   float:none;
+}
+
