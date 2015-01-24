@@ -8,7 +8,8 @@
     <% @cpanel_slides.each do |cpanel_slide| %>
     <li>
       <div class="list-title">
-        <%= cpanel_slide.image_url %>
+        <%= cpanel_slide.title.html_safe %>
+        <%= cpanel_slide.avatar.url %>
       </div>
       <div class="list-action">
         <%= link_to '编辑', edit_cpanel_slide_path(cpanel_slide) %>

@@ -21,6 +21,9 @@
   <h3>职责描述：</h3>
   <div><%= @position.content.html_safe %></div>
 
+  <h3>Picture</h3>
+  <img src='<%= @position.avatar.url(:medium) %>' >
+
   <div class="btn btn-default">
     <a href="#" onclick="window.history.go(-1);return false;">返回上一页</a>
   </div>

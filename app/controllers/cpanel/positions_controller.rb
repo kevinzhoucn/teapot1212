@@ -47,6 +47,6 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
     end
 
     def cpanel_position_params
-      params.require(:position).permit(:title, :content, :status, :image_url_type)
+      params.require(:position).permit(:title, :content, :avatar)
     end
 end
