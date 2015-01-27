@@ -1,43 +1,58 @@
-<div class="dashboard">
-  <div class="dashboard-item">
-    <div class="item-content">
-      <%= link_to '设置网站基本信息', cpanel_site_configs_path %>
+<div class="dashboard-item">
+  <div class="item-content">
+    <%#= link_to '设置网站基本信息', cpanel_site_configs_path %>
+    <a href="/cpanel/site_configs">
+      设置网站基本信息
       <span class="item-detail">
+      <br>
         设置企业形象、招商加盟信息、联系信息
       </span>
-    </div>
-    
+    </a>
   </div>
-  <div class="dashboard-item">
-    <div class="item-content">
-      <%= link_to '设置图片轮播', cpanel_slides_path %>
+  
+</div>
+<div class="dashboard-item">
+  <div class="item-content">
+    <%#= link_to '设置图片轮播', cpanel_slides_path %>
+    <a href="/cpanel/slides">
+      设置图片轮播
       <span class="item-detail">
+        <br>
         更改首页图片轮播的图片和文字说明
       </span>
-    </div>
+    </a>
   </div>
-  <div class="dashboard-item">
-    <div class="item-content">
-      <%= link_to '编辑企业新闻', cpanel_news_index_path %>
+</div>
+<div class="dashboard-item">
+  <div class="item-content">
+    <%#= link_to '编辑企业新闻', cpanel_news_index_path %>
+    <a href="/cpanel/news">编辑企业新闻
       <span class="item-detail">
+      <br>
         添加、删除《美丽资讯》栏目中的企业新闻
       </span>
-    </div>
+    </a>
   </div>
-  <div class="dashboard-item">
-    <div class="item-content">
-      <%= link_to '产品管理', cpanel_products_path %>
+</div>
+<div class="dashboard-item">
+  <div class="item-content">
+    <%#= link_to '产品管理', cpanel_products_path %>
+    <a href="/cpanel/products">产品管理
       <span class="item-detail">
+      <br>
         添加、删除产品，设置产品类别
       </span>
-    </div>
+    </a>
   </div>
-  <div class="dashboard-item">
-    <div class="item-content">
-      <%= link_to '设置在线招聘', cpanel_positions_path %>
+</div>
+<div class="dashboard-item">
+  <div class="item-content">
+    <%#= link_to '设置在线招聘', cpanel_positions_path %>
+    <a href="/cpanel/positions">设置在线招聘
       <span class="item-detail">
+      <br>
         添加、删除、变更职位信息
       </span>
-    </div>
+    </a>
   </div>
 </div>

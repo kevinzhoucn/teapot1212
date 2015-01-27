@@ -7,6 +7,9 @@
     float:left;
     list-style: none;
   }
+  .tabs{
+    width:100%;
+  }
 </style>
 <h1>网站基本信息设置</h1>
 <hr />
@@ -30,7 +33,7 @@
     </li>
   </div>
 
-  <div id="content2">
+  <div id="content2" style="text-align:center">
     <li>
       <%= link_to '编辑加盟优势', edit_cpanel_site_config_path(@cpanel_affiliate_advantage) %><br>
     </li>
@@ -39,7 +42,7 @@
     </li>
   </div>
 
-  <div id="content3">
+  <div id="content3" style="text-align:right;padding-right:20px;">
     <li>
       <%= link_to '编辑联系地址', edit_cpanel_site_config_path(@cpanel_contact_address) %>
     </li>
