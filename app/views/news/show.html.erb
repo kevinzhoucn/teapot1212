@@ -11,12 +11,10 @@
   
   <h3><%= @news.title %></h3>
   <p>
-    <%= @news.content %>
+    <%= @news.content.html_safe %>
   </p>
   <div class="btn">
     <a href="#" onclick="window.history.go(-1);return false;">返回</a>
   </div>
 
-<%#= link_to 'Edit', edit_news_path(@news) %>
-<%#= link_to 'Back', news_index_path %>
 </div>

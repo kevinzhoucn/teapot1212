@@ -12,7 +12,7 @@
       <a href="#page" class="lb-close">x 关闭</a>
     </div>
     <div class="productcontent">
-      <%= @product.content %>
+      <%= @product.content.html_safe %>
     </div>
 
   <div style="clear:both"></div>

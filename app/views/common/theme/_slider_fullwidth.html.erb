@@ -6,7 +6,7 @@
     <ul class="slides">
       <% @slides.each do |slide| %>
         <li style="background:url('<%= slide.avatar.url %>') 50% 0 no-repeat;">
-          <div><h2><%= slide.title %></h2></div>
+          <div><h2><%= slide.title.html_safe %></h2></div>
         </li>
       <% end %>
     </ul>
