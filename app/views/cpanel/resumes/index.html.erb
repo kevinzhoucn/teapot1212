@@ -1,0 +1,29 @@
+<h1>Listing resumes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Attachment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resumes.each do |resume| %>
+      <tr>
+        <td><%= link_to resume.name, cpanel_resume_path(resume) %></td>
+        <td><%= resume.content %></td>
+        <td><%= link_to 'Download', resume.avatar.url %></td>
+        <td><%= link_to 'Show', resume %></td>
+        <td><%= link_to 'Edit', '#' %></td>
+        <td><%= link_to 'Destroy', cpanel_resume_path(resume), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

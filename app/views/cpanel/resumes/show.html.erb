@@ -1,0 +1,26 @@
+<div class="content txt_h">
+<p id="notice"><%= notice %></p>
+<h2>
+  简历
+  <%= @resume.name %>
+</h2>
+<hr>
+<h3>
+  应聘职位:
+  <%= @resume.position.title %>
+</h3>
+<p>
+  <strong>Title:</strong>
+  <%#= @resume.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @resume.content %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%#= link_to 'Download', @resume.avatar.url %>
+</p>
+</div>

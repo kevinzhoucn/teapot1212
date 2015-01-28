@@ -22,6 +22,7 @@ Rails40Starter::Application.routes.draw do
     resources :products
     resources :positions
     resources :slides
+    resources :resumes
     get '/about' => 'front#about', as: :front_about
   end
 
