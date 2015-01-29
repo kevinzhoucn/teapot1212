@@ -30,7 +30,8 @@ class Cpanel::NewsController < Cpanel::ApplicationController
 
   def update
     @news.update(news_params)
-    respond_with(@news)
+    redirect_to cpanel_news_path
+    # respond_with(@news)
   end
 
   def destroy
