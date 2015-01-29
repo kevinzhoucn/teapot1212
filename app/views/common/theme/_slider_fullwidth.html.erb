@@ -5,7 +5,7 @@
   <div class="flexslider">
     <ul class="slides">
       <% @slides.each do |slide| %>
-        <li style="background:url('<%= slide.avatar.url %>') 50% 0 no-repeat;">
+        <li style="background:url('<%= slide.avatar.url %>') 50% 50% no-repeat;">
           <div style="padding-left:10%;padding-top:5%">
             <%= slide.title.html_safe %>
           </div>

@@ -216,11 +216,12 @@ ul.dropdown li{
 .productimg{
 	float:left;
 	margin:0 10px 0 5px;
-	max-width:400px;
-	max-height:300px;
+	width:400px;
+	height:300px;
 }
 .productimg img{
-	width: 100%;
+	width: 95%;
+	height: 95%;
 	border: #fff solid 5px;
 	border-radius: 5px;
 }
@@ -774,7 +775,7 @@ x:-o-prefocus, .lb-overlay img {
 	margin:0 0 5px 0;
 }
 .productimg{
-	max-width:100%;
+	width:100%;
 	margin:0;
 	padding:0;
 }
