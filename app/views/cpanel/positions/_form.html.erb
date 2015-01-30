@@ -9,11 +9,13 @@
     <br>
     <!-- <label>职位类型</label> -->
     <%#= f.collection_radio_buttons :image_url_type, [ ['员工', '0'], ['店长', '1'] ], :last, :first, checked: 0 %>
+
     <%= f.input :avatar, label: "上传职位图片：" %>
   </div>
-
+<br>
   <div class="form-actions">
-    <%= f.button :submit,value: "确定", class: "submitbtn" %>
+    <%= f.button :submit,value: "确定", class: "brivates-button" %>
+    <%= link_to '取消', cpanel_positions_path,class:"brivates-button" %>
   </div>
 <% end %>
 <script>

@@ -6,9 +6,10 @@
     <%= f.input :avatar, label: "上传图片：" %>
     <%= f.input :title, label: "文字说明",as: :text %>
   </div>
-
+<br>
   <div class="form-actions">
-    <%= f.button :submit, 'button', class: "submitbtn", value: "确定" %>
+    <%= f.button :submit, 'button', class: "submitbtn", value: "确定",class:"brivates-button" %>
+    <%= link_to '返回', cpanel_slides_path,class:"brivates-button" %>
   </div>
 <% end %>
 <script>
