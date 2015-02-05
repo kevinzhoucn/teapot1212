@@ -21,6 +21,9 @@ $(document).ready(function(){
     {
       $("#cpanelNews").addClass("active");
     }
+    else if (/resumes/.test(url.toLowerCase())) {
+      $("#cpanelPositions").addClass("active");
+    }
     else
     {
       $("#cpanelHome").addClass("active");

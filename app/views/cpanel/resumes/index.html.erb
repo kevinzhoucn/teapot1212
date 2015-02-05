@@ -1,18 +1,18 @@
 <h2>查看收到的简历</h2>
+<%= link_to '返回', cpanel_positions_path, class:"brivates-button" %>
 <hr>
 
-  <% @resumes.each do |resume| %>
+  <% @cpanel_resumes.each do |resume| %>
     <ul>
       <li style="line-height:30px;">
         <font size="+2"><%= resume.name %></font>
         <%#= resume.content %>
         <%= link_to '删除', cpanel_resume_path(resume), method: :delete, data: { confirm: 'Are you sure?' },class:"brivates-button", style:"float:right" %>
         <%= link_to '下载附件', resume.avatar.url,class:"brivates-button", style:"float:right"  %>
-        <%= link_to '查看详情', resume,class:"brivates-button", style:"float:right"  %>
+        <%= link_to '查看详情', cpanel_resume_path(resume),class:"brivates-button", style:"float:right"  %>
         <%#= link_to 'Edit', '#' %>
-        
-        
       </li>
     </ul>
-
   <% end %>
+  <hr>
+  <%= link_to '返回', cpanel_positions_path, class:"brivates-button" %>

@@ -1,4 +1,4 @@
-<style type="text/css">
+<!--<style type="text/css">
 @import url('/css/tabbing.css');
 </style>
 <style type="text/css">
@@ -10,11 +10,10 @@
   .tabs{
     width:100%;
   }
-</style>
-<h2>网站基本信息设置</h2>
-<hr />
+</style>-->
 
-<div id="l-container">
+
+<!-- <div id="l-container">
   <ul>
     <li id="label1">企业形象</li>
     <li id="label2">招商加盟</li>
@@ -24,7 +23,6 @@
 
 <div class="tabs">
   <div id="content1" style="display:block">
-    <!--about_title | 企业形象标题 <br> 这个key不要了，删掉-->
     <li>
       <%= link_to '编辑企业形象图片', edit_cpanel_site_config_path(@cpanel_about_image_url) %>
     </li>
@@ -60,4 +58,78 @@
     </li>
   </div>
 </div>
-<script type="text/javascript" src="/js/tabbing.js"></script>
+<script type="text/javascript" src="/js/tabbing.js"></script> -->
+<style type="text/css">
+  .site_config_container{
+    width:50%;
+    float:left;
+  }
+  .site_config_container ul{
+    border:1px solid #79BE3C;
+    min-height: 160px;
+    margin:15px;
+    padding:10px;
+    border-radius: 10px
+  }
+  .site_config_container li{
+    line-height:30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align:center;
+  }
+</style>
+<h2>网站基本信息设置</h2>
+<hr />
+<div class="site_config_container">
+  <ul>
+    <li>企业形象设置</li>
+    <li>
+      企业形象图片 &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_about_image_url), class:"brivates-button"%>
+    </li>
+    <li>
+      企业形象内容 &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_about_content_html), class:"brivates-button"%>
+    </li>
+  </ul>
+</div>
+<div class="site_config_container">
+  <ul>
+    <li>招商加盟设置</li>
+    <li>
+       加盟优势 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_affiliate_advantage), class:"brivates-button" %>
+      </li>
+    <li>
+      加盟政策 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_affiliate_policy) , class:"brivates-button"%>
+    </li>
+  </ul>
+</div>
+
+<div class="site_config_container">
+  <ul>
+    <li>财富连线</li>
+    <li>
+      联系地址 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_address), class:"brivates-button" %>
+    </li>
+    <li>
+      联系电话 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_phone), class:"brivates-button" %>
+    </li>
+    <li>
+      联系邮箱 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_email), class:"brivates-button" %>
+    </li>
+    <li>
+      联系&nbsp;Q&nbsp;Q &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_qq), class:"brivates-button" %>
+    </li>
+    <li>
+      联系微信 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_contact_webchat), class:"brivates-button" %>
+    </li>
+  </ul>
+</div>
+
+<div class="site_config_container">
+  <ul>
+    <li>简历反馈</li>
+    <li>简历反馈信息 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '编辑', edit_cpanel_site_config_path(@cpanel_resume_string), class:"brivates-button" %></li>
+  </ul>
+</div>

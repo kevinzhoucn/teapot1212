@@ -1,26 +1,24 @@
-<div class="content txt_h">
 <p id="notice"><%= notice %></p>
 <h2>
-  简历
-  <%= @resume.name %>
+  <%= @cpanel_resume.name %>的简历
 </h2>
 <hr>
 <h3>
   应聘职位:
-  <%= @resume.position.title %>
+  <%= @cpanel_resume.position.title %>
 </h3>
-<p>
+<!-- <p>
   <strong>Title:</strong>
-  <%#= @resume.title %>
-</p>
+  <%#= @cpanel_resume.title %>
+</p> -->
+<h3>
+  姓名：<%= @cpanel_resume.name%>
+</h3>
+<h3>
+  简介：<%= @cpanel_resume.content %>
+</h3>
 
-<p>
-  <strong>Content:</strong>
-  <%= @resume.content %>
-</p>
-
-<p>
-  <strong>File:</strong>
-  <%#= link_to 'Download', @resume.avatar.url %>
-</p>
-</div>
+<h3>
+<%= link_to '返回', cpanel_resumes_path, class:"brivates-button" %>
+  <%= link_to '下载附件', @cpanel_resume.avatar.url,class:"brivates-button" %>
+</h3>

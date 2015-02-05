@@ -1,4 +1,7 @@
 <h2>设置图片轮播</h2>
+<div class="btn-container">
+    <%= link_to '添加图片', new_cpanel_slide_path, class:"brivates-button" %>
+</div>
 <hr>
   <% @cpanel_slides.each do |cpanel_slide| %>
       <%#= cpanel_slide.title %>
@@ -11,6 +14,7 @@
         </li>
       </ul>
   <% end %>
-
 <hr>
-<%= link_to '添加图片', new_cpanel_slide_path, class:"brivates-button" %>
+<div class="btn-container">
+  <%= link_to '添加图片', new_cpanel_slide_path, class:"brivates-button" %>
+</div>

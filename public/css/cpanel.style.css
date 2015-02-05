@@ -2649,7 +2649,9 @@ pre
   min-height:400px;
   padding:10px;
   margin-top:5px;
-  background-color:#E6EFDA
+  background-color:#E6EFDA;
+  border-radius:10px;
+  overflow: hidden;
 }
 .dashboard-item{
   width:220px;
@@ -2657,6 +2659,7 @@ pre
   border-width: 1px;
   border-style: solid;
   border-color: #86B422;
+  border-radius:10px;
   float: left;
   margin-left:15px;
   margin-bottom: 15px;
@@ -2701,4 +2704,8 @@ pre
   opacity: 1;
   filter: alpha(opacity=99); /* internet explorer */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+.btn-container{
+  height:35px;
+  line-height:35px;
 }

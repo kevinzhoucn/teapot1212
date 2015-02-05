@@ -17,7 +17,13 @@ class Cpanel::SiteConfigsController < Cpanel::ApplicationController
     @cpanel_contact_phone = SiteConfig.where( key: 'contact_phone').first
     @cpanel_contact_email = SiteConfig.where( key: 'contact_email').first
     @cpanel_contact_qq = SiteConfig.where( key: 'contact_qq').first
-    @cpanel_contact_webchat = SiteConfig.where( key: 'contact_webchat').first
+    @cpanel_contact_webchat = SiteConfig.where( key: 'contact_webchat').first    
+    
+    # create if not find
+    if not SiteConfig.find_by_key('resume_string')
+      SiteConfig.resume_string = 'resume_string'
+    end
+    @cpanel_resume_string = SiteConfig.find_by_key('resume_string')
 
     # @cpanel_about_title = SiteConfig.about_title
     # @cpanel_about_content_html = SiteConfig.about_content_html

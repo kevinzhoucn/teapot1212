@@ -30,7 +30,7 @@ class Cpanel::NewsController < Cpanel::ApplicationController
 
   def update
     @news.update(news_params)
-    redirect_to cpanel_news_path
+    redirect_to cpanel_news_index_path
     # respond_with(@news)
   end
 

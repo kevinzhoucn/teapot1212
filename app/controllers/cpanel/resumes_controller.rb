@@ -5,47 +5,48 @@ class Cpanel::ResumesController < Cpanel::ApplicationController
   respond_to :html
 
   def index
-    @resumes = Resume.all
-    respond_with(@resumes)
+    @cpanel_resumes = Resume.all
+    respond_with(@cpanel_resumes)
   end
 
   def show
-    respond_with(@resume)
+    respond_with(@cpanel_resume)
   end
 
   def new
-    @resume = Resume.new
-    respond_with(@resume)
+    @cpanel_resume = Resume.new
+    respond_with(@cpanel_resume)
   end
 
   def edit
   end
 
   # def create
-  #   @resume = Resume.new(resume_params)
-  #   @resume[:position_id] = @position.id
+  #   @cpanel_resume = Resume.new(resume_params)
+  #   @cpanel_resume[:position_id] = @position.id
 
-  #   if @resume.save
+  #   if @cpanel_resume.save
   #     flash[:notice] = 'Resume was successfully created.'
-  #     Notifier.resume_received(@resume).deliver 
+  #     Notifier.resume_received(@cpanel_resume).deliver 
   #   end
     
-  #   respond_with(@resume)
+  #   respond_with(@cpanel_resume)
   # end
 
   def update
-    @resume.update(resume_params)
-    respond_with(@resume)
+    @cpanel_resume.update(resume_params)
+    respond_with(@cpanel_resume)
   end
 
   def destroy
-    @resume.destroy
-    respond_with(@resume)
+    @cpanel_resume.destroy
+    # respond_with(@cpanel_resume)
+    redirect_to '/cpanel/resumes'
   end
 
   private
     def set_resume
-      @resume = Resume.find(params[:id])      
+      @cpanel_resume = Resume.find(params[:id])      
       # @position = Position.find(params[:position_id])
     end
 

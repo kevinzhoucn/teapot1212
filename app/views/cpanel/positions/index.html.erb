@@ -1,6 +1,10 @@
-<h1>正在招聘的职位</h1>
+<h2>正在招聘的职位</h2>
+<div class="btn-container">
+  <%= link_to '添加新职位', new_cpanel_position_path,class:"brivates-button" %>
+  <%= link_to '查看收到的简历', cpanel_resumes_path,class:"brivates-button" %>
+</div>
 <hr>
-
+<div style="width:50%;float:left">
   <% @cpanel_positions.each do |position| %>
         <%#= image_tag position.avatar.url(:thumb) %>
     <ul>
@@ -13,8 +17,11 @@
       </li>
     </ul>
   <% end %>
+</div>
+<div style="clear:both"></div>
 <hr>
-  <div style="height:35px;line-height:35px;position:relative">
-    <%= link_to '添加新职位', new_cpanel_position_path,class:"brivates-button" %>
-  </div>
+<div class="btn-container">
+  <%= link_to '添加新职位', new_cpanel_position_path,class:"brivates-button" %>
+  <%= link_to '查看收到的简历', cpanel_resumes_path,class:"brivates-button" %>
+</div>
 

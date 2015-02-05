@@ -1,4 +1,7 @@
 <h2>编辑企业新闻</h2>
+<div class="btn-container">
+  <%= link_to '添加新闻', new_cpanel_news_path, class:"brivates-button" %>
+</div>
 <hr>
   <% @news.each do |news| %>
     <ul>
@@ -9,7 +12,8 @@
       </li>
     </ul>
   <% end %>
-  <div style="height:35px;line-height:35px;">
-    <%= link_to '添加新闻', new_cpanel_news_path, class:"brivates-button" %>
-  </div>
+<hr>
+<div class="btn-container">
+  <%= link_to '添加新闻', new_cpanel_news_path, class:"brivates-button" %>
+</div>
 </div>

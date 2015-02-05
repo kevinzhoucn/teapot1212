@@ -10,6 +10,7 @@ class ResumesController < ApplicationController
   end
 
   def show
+    @resume_string = SiteConfig.resume_string
     respond_with(@resume)
   end
 
