@@ -26,7 +26,7 @@ Rails40Starter::Application.routes.draw do
     get '/about' => 'front#about', as: :front_about
   end
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
 
   get '/about' => 'front#about', as: :front_about
   # get '/news' => 'front#news', as: :front_news
